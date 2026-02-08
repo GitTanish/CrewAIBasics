@@ -1,0 +1,43 @@
+report_task:
+  description: >
+    Research and generate a comprehensive report on {topic}.
+    Use current information from {current_year}. Prioritize credible, primary sources.
+    Target length: approximately 2000 words. Focus on depth over breadth.
+  expected_output: >
+    A structured research report in markdown (no code fences) with these sections:
+
+    1. EXECUTIVE SUMMARY (150-200 words): Key findings and takeaways upfront. A busy reader should understand the core message from this alone.
+
+    2. BACKGROUND (200-300 words): Context needed to understand the topic. Define key terms. Explain why this matters now.
+
+    3. FINDINGS (800-1000 words): The substantive research, organized by theme or importance. Each major point should cite its source. Present competing perspectives where they exist.
+
+    4. ANALYSIS (300-400 words): Your interpretation of the findings. What patterns emerge? What are the implications? Distinguish between established facts and your inferences.
+
+    5. RECOMMENDATIONS (150-200 words): Actionable next steps or conclusions based on the analysis.
+    
+    6. SOURCES: List all referenced sources with enough detail to locate them.
+
+    Quality criteria: Flag any low-confidence claims. Acknowledge knowledge gaps explicitly rather than glossing over them.
+  agent: report_generator
+
+blog_task:
+  description: >
+    Create an engaging blog post on {topic} that educates and entertains.
+    Research the most relevant, current information. Write for curious readers who are new to intermediate on the subject.
+    Target length: 800-1200 words. Prioritize clarity and engagement over comprehensiveness.
+  expected_output: >
+    A reader-friendly blog post in markdown (no code fences) with:
+
+    OPENING HOOK (1-2 paragraphs): Start with a compelling question, surprising fact, or relatable scenario that answers "why should I care?"
+
+    BODY (3-5 sections with clear headings): Break complex ideas into digestible chunks. Use:
+    - Short paragraphs (3-4 sentences max)
+    - Bullet points for lists
+    - Real-world examples or analogies to explain technical concepts
+    - Conversational tone—write like explaining to a smart friend
+
+    CLOSING (1 paragraph): Memorable takeaway or call-to-action. Leave the reader with something to think about or do.
+
+    Quality criteria: Every paragraph should earn its place—no filler. Cite sources for factual claims. If something is your opinion vs. established fact, make that clear.
+  agent: blog_writer
